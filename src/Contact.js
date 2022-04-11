@@ -1,7 +1,7 @@
 const Contact = (props) => {
     return (
       <div className="contact">
-
+      
         <div className="NameContainer">
           <h1>Név: </h1>
           <div className="name">

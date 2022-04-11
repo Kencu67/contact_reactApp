@@ -1,25 +1,9 @@
 import './App.css';
-import { Contact } from './Contact';
-
-const contactItem = {
-    contact1 : {
-      name: 'Feri',
-      address: "Moon",
-      number: '0942879234'
-    },
-    contact2 : {
-      name: 'Tibi',
-      address: "Mars",
-      number: '423592421'
-    },
-};
+import { ContactList } from './ContactList';
 
 const App = () => {
   return (
-    <Contact
-        name={contactItem.contact1.name}
-        address={contactItem.contact1.address}
-        number={contactItem.contact1.number} />
+    <ContactList />
     );
   }
 
