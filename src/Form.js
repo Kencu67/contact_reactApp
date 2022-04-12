@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 const Basic = () => (
     <div className="Form">
         <div className="FormWrapper">
-        <h1> ÚJ BEJEGYZÉS</h1>
+        <h2> ÚJ BEJEGYZÉS</h2>
         <Formik
             initialValues={{ name: '', address: '', number: '' }}
             onSubmit={(values, { setSubmitting }) => {
@@ -19,27 +19,29 @@ const Basic = () => (
                 <div className="Wrapper">
                     <div className="NameInput">
                         <label htmlFor="name">Név</label>
-                        <Field type="text" name="name" placeholder="Kulka János" />
+                        <Field type="text" name="name" placeholder="... Kulka János" />
                         <ErrorMessage name="text" component="div" />
                     </div>
 
                     <div className='AddressInput'>
                         <label htmlFor="address">Lakcím</label>
-                        <Field type="text" name="address" placeholder="Tejút 1." />
+                        <Field type="text" name="address" placeholder="... Tejút 1." />
                         <ErrorMessage name="address" component="div" />
                     </div>
 
                     <div className='NumberInput'>
                         <label htmlFor="number">Telefonszám</label>
-                        <Field type="number" name="number" placeholder="0123456789"  />
+                        <Field type="number" name="number" placeholder="... 0123456789"  />
                         <ErrorMessage name="number" component="div" />
                     </div>
                 </div>
-                
 
-                <button className="FormButton" type="submit" disabled={isSubmitting}>
-                +++ ÚJ ISMERŐS +++
-                </button>
+                <div class="button-container-2">
+                    <span className='mas'>Hozzáadás</span>
+                    <button type="submit" name="Hover" disabled={isSubmitting}>
+                    Hozzáadás
+                    </button>
+                </div>
             </Form>
             )}
         </Formik>
